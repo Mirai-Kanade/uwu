@@ -1,7 +1,9 @@
 // script.js
 function checkLogin() {
-    const username = document.getElementById('username').value.toLowerCase();
-    const allowedNames = ["halfy", "halfi", "halfy", "halfi"];
+    const username = document.getElementById('username').value.trim().toLowerCase(); // Trim untuk menghapus spasi yang tidak diinginkan
+    const allowedNames = ["halfy", "halfi"];
+
+    console.log('Nama yang dimasukkan:', username);  // Log untuk memeriksa apa yang dimasukkan
 
     if (allowedNames.includes(username)) {
         document.getElementById('login-container').style.display = 'none';
@@ -11,9 +13,6 @@ function checkLogin() {
     }
 }
 
-function showLoveAnimation() {
-    const loveAnimation = document.getElementById('love-animation');
-    loveAnimation.style.display = 'block';
 
     // Hide the animation after 1 second
     setTimeout(function() {

@@ -3,49 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portofolio Halfy | Desainer Grafis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Website Romantis untuk Pacar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>WELCOME USER</h1>
-            <p>Desainer Grafis Kreatif & Profesional</p>
-            <a href="#contact" class="cta-button">Hubungi Saya</a>
-        </div>
-    </header>
+    <div id="login-container">
+        <h2>Siapa nama pacar kamu?</h2>
+        <input type="text" id="username" placeholder="Masukkan Nama Pacar">
+        <button onclick="checkLogin()">Masuk</button>
+    </div>
 
-    <section id="about" class="section-bg">
-        <div class="container">
-            <h2>Apa Itu Desainer Grafis?</h2>
-            <p>Desainer grafis adalah seorang profesional yang menciptakan elemen visual untuk komunikasi melalui media cetak dan digital. Desain yang efektif menyampaikan pesan dengan cara yang menarik, mempengaruhi audiens, dan membangun citra brand yang kuat.</p>
-        </div>
-    </section>
+    <div id="main-content" style="display: none;">
+        <h2>Selamat datang, sayang! 💖</h2>
+        <img src="foto-pacar.jpg" id="pacar-img" alt="Pacar" onclick="showLoveAnimation()">
+        <div id="love-animation" style="display: none;">💘</div>
+    </div>
 
-    <section id="about-owner">
-        <div class="container">
-            <h2>Owner: Halfy</h2>
-            <p>Saya Halfy, desainer grafis yang berfokus pada desain kreatif dan inovatif. Saya percaya bahwa desain visual yang bagus dapat mengubah cara orang melihat dunia dan memperkuat pesan yang ingin disampaikan.</p>
-            <img src="https://i.pinimg.com/736x/25/67/0f/25670faab31116237d5b5137719abe32.jpg" alt="Owner Image" class="owner-image">
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Kontak Support</h2>
-            <p>Untuk pertanyaan atau kerja sama, Anda bisa menghubungi saya melalui Instagram:</p>
-            <p><strong>Instagram: <a href="https://instagram.com/halfi.69" target="_blank">@halfi.69</a></strong></p>
-            <a href="https://instagram.com/halfi.69" class="cta-button">Kunjungi Instagram</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Halfy. Semua hak cipta dilindungi.</p>
-        </div>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
-

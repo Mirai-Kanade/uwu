@@ -1,70 +1,48 @@
-/* Fonts & Global Settings */
+/* Umum */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
-    background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb);
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
     margin: 0;
     padding: 0;
-    color: #333;
-    animation: backgroundMove 10s infinite alternate;
+    color: #fff;
+    animation: backgroundMove 10s infinite;
 }
 
 @keyframes backgroundMove {
     0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Header */
 header {
-    background-color: #ff6f91;
-    color: white;
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ff4081;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pulseHeader 2s infinite;
 }
 
 header h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 36px;
     margin: 0;
+    font-size: 28px;
 }
 
-header p {
-    margin: 5px 0 0;
-    font-style: italic;
+@keyframes pulseHeader {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
-/* Sections */
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
+/* Login dan Konten */
+#login-container, #main-content {
+    margin-top: 10%;
+    padding: 20px;
+    animation: fadeIn 2s ease;
 }
 
-.card {
-    background: white;
-    padding: 20px 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    width: 90%;
-    max-width: 400px;
-}
-
-/* Input & Buttons */
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin: 15px 0;
-    border: 2px solid #ff6f91;
-    border-radius: 10px;
-    font-size: 16px;
-    outline: none;
-    transition: all 0.3s;
-}
-
-input[type="text"]:focus {
-    border-color: #ff4081;
-    box-shadow: 0 0 5px #ff4081;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 button {
@@ -73,38 +51,39 @@ button {
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
-    font-size: 18px;
     cursor: pointer;
+    margin-top: 20px;
+    font-size: 18px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.3s;
-    margin-top: 10px;
-    width: 100%;
 }
 
 button:hover {
-    background-color: #d6336c;
-    transform: scale(1.05);
+    background-color: #ff1a75;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Animasi Cinta */
 #love-animation {
     font-size: 50px;
-    margin: 10px 0;
-    color: #ff4081;
-    animation: heartBeat 1.5s infinite;
+    animation: pop 0.5s infinite, fadeIn 2s;
 }
 
-@keyframes heartBeat {
-    0%, 100% { transform: scale(1); }
+@keyframes pop {
+    0% { transform: scale(1); }
     50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
 
 /* Footer */
 footer {
-    background-color: #ff6f91;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ff4081;
     color: white;
     padding: 10px 0;
     font-size: 14px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }

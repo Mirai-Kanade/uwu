@@ -1,21 +1,27 @@
-// script.js
 function checkLogin() {
-    const username = document.getElementById('username').value.trim().toLowerCase(); // Trim untuk menghapus spasi yang tidak diinginkan
-    const allowedNames = ["halfy", "halfi"];
+    const username = document.getElementById('username').value.trim();
+    const loginContainer = document.getElementById('login-container');
+    const mainContent = document.getElementById('main-content');
 
-    console.log('Nama yang dimasukkan:', username);  // Log untuk memeriksa apa yang dimasukkan
+    if (username) {
+        loginContainer.style.display = 'none';
+        mainContent.style.display = 'block';
 
-    if (allowedNames.includes(username)) {
-        document.getElementById('login-container').style.display = 'none';
-        document.getElementById('main-content').style.display = 'block';
+        // Tambahkan nama pacar ke pesan selamat datang
+        const welcomeMessage = mainContent.querySelector('h2');
+        welcomeMessage.textContent = `Selamat datang, ${username}! 💖`;
     } else {
-        alert('Nama yang kamu masukkan salah! Coba lagi.');
+        alert('Masukkan nama pacarmu dulu, dong!');
     }
 }
 
+function showLoveAnimation() {
+    const loveAnimation = document.getElementById('love-animation');
+    loveAnimation.style.display = 'block';
 
-    // Hide the animation after 1 second
-    setTimeout(function() {
+    // Tambahkan animasi kecil
+    setTimeout(() => {
         loveAnimation.style.display = 'none';
-    }, 1000);
+    }, 2000);
 }
+

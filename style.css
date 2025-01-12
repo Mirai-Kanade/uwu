@@ -1,69 +1,36 @@
-/* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+    font-family: 'Arial', sans-serif;
     text-align: center;
+    background-color: #ffe6e6;
+    color: #ff4081;
+    margin: 0;
+    padding: 0;
 }
 
-#login-container {
-    margin-top: 50px;
-}
-
-#username {
-    padding: 10px;
-    margin: 10px;
-    font-size: 16px;
+#login-container, #main-content {
+    margin-top: 20%;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #ff6f61;
+    background-color: #ff4081;
     color: white;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #e05d52;
-}
-
-#main-content {
-    margin-top: 50px;
-}
-
-#pacar-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-#pacar-img:hover {
-    transform: scale(1.1);
+    background-color: #ff1a75;
 }
 
 #love-animation {
     font-size: 50px;
-    animation: loveAnim 0.5s ease-in-out forwards;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
+    animation: pop 0.5s infinite;
 }
 
-@keyframes loveAnim {
-    0% {
-        opacity: 0;
-        transform: translateY(0) scale(1);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(-50px) scale(1.5);
-    }
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
-

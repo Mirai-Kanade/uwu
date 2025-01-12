@@ -19,10 +19,21 @@ function showLoveAnimation() {
     const loveAnimation = document.getElementById('love-animation');
     loveAnimation.style.display = 'block';
 
-    // Tambahkan animasi kecil
     setTimeout(() => {
         loveAnimation.style.display = 'none';
     }, 2000);
 }
+
+function goBack() {
+    const loginContainer = document.getElementById('login-container');
+    const mainContent = document.getElementById('main-content');
+
+    loginContainer.style.display = 'block';
+    mainContent.style.display = 'none';
+
+    // Reset input field
+    document.getElementById('username').value = '';
+}
+
 
 

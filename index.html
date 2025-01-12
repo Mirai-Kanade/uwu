@@ -3,77 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khalfi Ramadhan Photography</title>
+    <title>Halaman Login Pacar</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <div class="logo">Khalfi Ramadhan</div>
-            <ul class="nav-links">
-                <li><a href="#about">Tentang Saya</a></li>
-                <li><a href="#gallery">Galeri</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="login-container">
+        <h2>Siapa nama pacarmu?</h2>
+        <input type="text" id="username" placeholder="Masukkan nama pacar">
+        <button onclick="goToNextPage()">Masuk</button>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Mengabadikan Momen, Menyentuh Jiwa</h1>
-            <p>Melihat dunia melalui lensa saya</p>
-            <a href="#gallery" class="btn">Lihat Galeri</a>
-        </div>
-    </section>
+    <div id="main-content" style="display: none;">
+        <h2>Selamat datang, <span id="display-name"></span> 💖</h2>
+        <img src="https://via.placeholder.com/300" id="pacar-img" alt="Foto Pacar" onclick="showLoveAnimation()">
+        <div id="love-animation"></div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>Tentang Saya</h2>
-            <p>Hai! Saya Khalfi Ramadhan, seorang fotografer dengan passion dalam mengabadikan momen-momen istimewa dalam hidup. Dari potret yang penuh emosi hingga pemandangan alam yang menakjubkan, saya berusaha menangkap esensi dari setiap cerita melalui foto-foto saya.</p>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <div class="container">
-            <h2>Galeri</h2>
-            <div class="gallery-grid">
-                <img src="https://via.placeholder.com/300" alt="Photo 1">
-                <img src="https://via.placeholder.com/300" alt="Photo 2">
-                <img src="https://via.placeholder.com/300" alt="Photo 3">
-                <img src="https://via.placeholder.com/300" alt="Photo 4">
-                <img src="https://via.placeholder.com/300" alt="Photo 5">
-                <img src="https://via.placeholder.com/300" alt="Photo 6">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Kontak</h2>
-            <form>
-                <label for="name">Nama</label>
-                <input type="text" id="name" placeholder="Nama Anda" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Email Anda" required>
-                
-                <label for="message">Pesan</label>
-                <textarea id="message" placeholder="Pesan Anda" rows="5" required></textarea>
-                
-                <button type="submit">Kirim Pesan</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Khalfi Ramadhan Photography. All rights reserved.</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

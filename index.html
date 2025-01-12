@@ -5,37 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Romantis - Halfy 💕</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>💖 Website Romantis - Halfy 💖</h1>
-        <p>"Karena cinta butuh sentuhan teknologi" 🌹</p>
+        <h1>💖 Selamat Datang di Website Romantis Halfy 💖</h1>
     </header>
 
     <!-- Login Section -->
-    <section id="login-container">
-        <div class="card">
-            <h2>Siapa nama pacar kamu?</h2>
-            <input type="text" id="username" placeholder="Masukkan Nama Pacar">
-            <button onclick="checkLogin()">Masuk</button>
-        </div>
-    </section>
+    <div id="login-container">
+        <h2>Siapa nama pacar kamu?</h2>
+        <input type="text" id="username" placeholder="Masukkan Nama Pacar">
+        <button onclick="checkLogin()">Masuk</button>
+    </div>
 
     <!-- Main Content Section -->
-    <section id="main-content" style="display: none;">
-        <div class="card">
-            <h2 id="welcome-message">Selamat datang, sayang! 💖</h2>
-            <img src="https://via.placeholder.com/200" id="pacar-img" alt="Pacar" onclick="showLoveAnimation()">
-            <div id="love-animation" style="display: none;">💘</div>
-            <button id="back-to-login" onclick="goBack()">Kembali ke Halaman Login</button>
-        </div>
-    </section>
+    <div id="main-content" style="display: none;">
+        <h2>Selamat datang, sayang! 💖</h2>
+        <img src="https://i.imgur.com/TAlmTIU.jpeg" id="pacar-img" alt="Pacar" onclick="showLoveAnimation()">
+        <div id="love-animation" style="display: none;">💘</div>
+        <button id="back-to-login" onclick="goBack()">Kembali ke Halaman Login</button>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>Website ini dibuat penuh cinta oleh <b>Halfy</b> 🌹</p>
+        <p>Website ini dibuat penuh cinta oleh Halfy 🌹</p>
     </footer>
 
     <script src="script.js"></script>

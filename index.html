@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Login Page -->
     <div id="login-container">
         <h2>Siapa nama pacarmu?</h2>
         <input type="text" id="username" placeholder="Masukkan nama pacar">
-        <button onclick="goToNextPage()">Masuk</button>
+        <button id="login-btn">Masuk</button>
     </div>
 
+    <!-- Main Content -->
     <div id="main-content" style="display: none;">
         <h2>Selamat datang, <span id="display-name"></span> 💖</h2>
         <img src="https://via.placeholder.com/300" id="pacar-img" alt="Foto Pacar" onclick="showLoveAnimation()">

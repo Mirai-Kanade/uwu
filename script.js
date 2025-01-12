@@ -5,10 +5,10 @@ function checkLogin() {
 
     if (username) {
         loginContainer.style.display = 'none';
-        mainContent.style.display = 'flex';
+        mainContent.style.display = 'block';
 
-        // Update pesan selamat datang
-        const welcomeMessage = document.getElementById('welcome-message');
+        // Tambahkan nama pacar ke pesan selamat datang
+        const welcomeMessage = mainContent.querySelector('h2');
         welcomeMessage.textContent = `Selamat datang, ${username}! 💖`;
     } else {
         alert('Masukkan nama pacarmu dulu, dong!');
@@ -28,9 +28,10 @@ function goBack() {
     const loginContainer = document.getElementById('login-container');
     const mainContent = document.getElementById('main-content');
 
-    loginContainer.style.display = 'flex';
+    loginContainer.style.display = 'block';
     mainContent.style.display = 'none';
 
     // Reset input field
     document.getElementById('username').value = '';
 }
+

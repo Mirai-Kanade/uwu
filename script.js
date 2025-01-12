@@ -1,50 +1,31 @@
-function checkLogin() {
-    const username = document.getElementById('username').value.trim();
-    const loginContainer = document.getElementById('login-container');
-    const mainContent = document.getElementById('main-content');
-    const backButton = document.getElementById('back-button');
-
-    if (username) {
-        loginContainer.style.display = 'none';
-        mainContent.style.display = 'flex';
-        backButton.style.display = 'block';
-
-        // Update pesan selamat datang
-        const welcomeMessage = document.getElementById('welcome-message');
-        welcomeMessage.textContent = `Selamat datang, ${username}! 💖`;
-    } else {
-        alert('Masukkan nama pacarmu dulu, dong!');
+// Navigate to the next page
+function goToNextPage() {
+    const username = document.getElementById("username").value;
+    if (username.trim() === "") {
+        alert("Masukkan nama pacar dulu, dong!");
+        return;
     }
+
+    document.getElementById("login-container").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+    document.getElementById("display-name").textContent = username;
 }
 
+// Love animation when the image is clicked
 function showLoveAnimation() {
-    const loveAnimation = document.getElementById('love-animation');
-    const pacarImg = document.getElementById('pacar-img');
+    const loveAnimation = document.getElementById("love-animation");
+    const love = document.createElement("div");
+    love.classList.add("love");
 
-    // Posisi love animation sesuai klik
-    const rect = pacarImg.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    love.style.left = `${x}px`;
+    love.style.top = `${y}px`;
 
-    loveAnimation.style.left = `${centerX}px`;
-    loveAnimation.style.top = `${centerY}px`;
+    love.textContent = "💖";
+    loveAnimation.appendChild(love);
 
-    loveAnimation.style.display = 'block';
     setTimeout(() => {
-        loveAnimation.style.display = 'none';
-    }, 1000);
+        love.remove();
+    }, 1500);
 }
-
-function goBack() {
-    const loginContainer = document.getElementById('login-container');
-    const mainContent = document.getElementById('main-content');
-    const backButton = document.getElementById('back-button');
-
-    loginContainer.style.display = 'flex';
-    mainContent.style.display = 'none';
-    backButton.style.display = 'none';
-
-    // Reset input field
-    document.getElementById('username').value = '';
-}
-

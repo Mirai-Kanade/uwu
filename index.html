@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Login Pacar</title>
+    <title>Website Romantis - Halfy 💕</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Login Page -->
-    <div id="login-container">
-        <h2>Siapa nama pacarmu?</h2>
-        <input type="text" id="username" placeholder="Masukkan nama pacar">
-        <button id="login-btn">Masuk</button>
-    </div>
+    <!-- Tombol Kembali -->
+    <button id="back-button" onclick="goBack()">⬅ Kembali</button>
 
-    <!-- Main Content -->
-    <div id="main-content" style="display: none;">
-        <h2>Selamat datang, <span id="display-name"></span> 💖</h2>
-        <img src="https://via.placeholder.com/300" id="pacar-img" alt="Foto Pacar" onclick="showLoveAnimation()">
-        <div id="love-animation"></div>
-    </div>
+    <!-- Login Section -->
+    <section id="login-container">
+        <div class="card">
+            <h2>Siapa nama pacar kamu?</h2>
+            <input type="text" id="username" placeholder="Masukkan Nama Pacar">
+            <button onclick="checkLogin()">Masuk</button>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="main-content" style="display: none;">
+        <div class="card">
+            <h2 id="welcome-message">Selamat datang, sayang! 💖</h2>
+            <img src="https://via.placeholder.com/200" id="pacar-img" alt="Pacar" onclick="showLoveAnimation()">
+            <div id="love-animation" style="display: none;">💘</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Website ini dibuat penuh cinta oleh <b>Halfy</b> 🌹</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+

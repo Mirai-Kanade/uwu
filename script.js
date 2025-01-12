@@ -1,37 +1,51 @@
-// Event Listener for Login Button
-document.getElementById("login-btn").addEventListener("click", function () {
-    const username = document.getElementById("username").value.trim();
+function checkLogin() {
+    const username = document.getElementById('username').value.trim();
+    const loginContainer = document.getElementById('login-container');
+    const mainContent = document.getElementById('main-content');
+    const backButton = document.getElementById('back-button');
 
-    if (username === "") {
-        alert("Masukkan nama pacar dulu, dong!");
-        return;
+    if (username) {
+        loginContainer.style.display = 'none';
+        mainContent.style.display = 'flex';
+        backButton.style.display = 'block';
+
+        // Update pesan selamat datang
+        const welcomeMessage = document.getElementById('welcome-message');
+        welcomeMessage.textContent = `Selamat datang, ${username}! 💖`;
+    } else {
+        alert('Masukkan nama pacarmu dulu, dong!');
     }
-
-    // Hide login page and show main content
-    document.getElementById("login-container").style.display = "none";
-    document.getElementById("main-content").style.display = "block";
-
-    // Display the username
-    document.getElementById("display-name").textContent = username;
-});
-
-// Love animation when the image is clicked
-function showLoveAnimation() {
-    const loveAnimation = document.getElementById("love-animation");
-    const love = document.createElement("div");
-    love.classList.add("love");
-
-    // Random position
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight;
-    love.style.left = `${x}px`;
-    love.style.top = `${y}px`;
-
-    love.textContent = "💖";
-    loveAnimation.appendChild(love);
-
-    setTimeout(() => {
-        love.remove();
-    }, 1500);
 }
+
+function showLoveAnimation() {
+    const loveAnimation = document.getElementById('love-animation');
+    const pacarImg = document.getElementById('pacar-img');
+
+    // Posisi love animation sesuai klik
+    const rect = pacarImg.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    loveAnimation.style.left = `${centerX}px`;
+    loveAnimation.style.top = `${centerY}px`;
+
+    loveAnimation.style.display = 'block';
+    setTimeout(() => {
+        loveAnimation.style.display = 'none';
+    }, 1000);
+}
+
+function goBack() {
+    const loginContainer = document.getElementById('login-container');
+    const mainContent = document.getElementById('main-content');
+    const backButton = document.getElementById('back-button');
+
+    loginContainer.style.display = 'flex';
+    mainContent.style.display = 'none';
+    backButton.style.display = 'none';
+
+    // Reset input field
+    document.getElementById('username').value = '';
+}
+
 

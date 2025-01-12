@@ -1,28 +1,48 @@
 /* Umum */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
     background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
     margin: 0;
     padding: 0;
     color: #fff;
+    animation: backgroundMove 10s infinite;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Header */
 header {
     background-color: #ff4081;
-    padding: 10px 0;
+    padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pulseHeader 2s infinite;
 }
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
+}
+
+@keyframes pulseHeader {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
 /* Login dan Konten */
 #login-container, #main-content {
-    margin-top: 20%;
+    margin-top: 10%;
+    padding: 20px;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 button {
@@ -30,19 +50,24 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
 }
 
 button:hover {
     background-color: #ff1a75;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Animasi Cinta */
 #love-animation {
     font-size: 50px;
-    animation: pop 0.5s infinite;
+    animation: pop 0.5s infinite, fadeIn 2s;
 }
 
 @keyframes pop {
@@ -60,11 +85,5 @@ footer {
     color: white;
     padding: 10px 0;
     font-size: 14px;
-}
-
-
-@keyframes pop {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
